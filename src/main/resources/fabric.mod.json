@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "thehowlingcurse",
+	"version": "${version}",
+	"name": "The Howling Curse",
+	"description": "The howling beigins, run!",
+	"authors": [
+		"System Error 06"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "GNU GPL 3.0",
+	"icon": "assets/thehowlingcurse/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.systemerror.thehowlingcurse.TheHowlingCurse"
+		],
+		"client": [
+			"net.systemerror.thehowlingcurse.TheHowlingCurseClient"
+		],
+		"fabric-datagen": [
+			"net.systemerror.thehowlingcurse.TheHowlingCurseDataGenerator"
+		]
+	},
+	"mixins": [
+		"thehowlingcurse.mixins.json",
+		{
+			"config": "thehowlingcurse.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
